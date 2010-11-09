@@ -40,7 +40,7 @@ class Shkuph::Adapters::GDBM
   def each(&block)
     # it is pretty slow, but so fucking useful
     @shkuph.each_pair do |key, value|
-      block.call(keystrat.load(key), valstrat.load(key))
+      block.call(keystrat.load(key), valstrat.load(value))
     end
   end
 
