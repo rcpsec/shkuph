@@ -1,8 +1,12 @@
 Shkuph: A Comfortable and Unified KVS Interface
 ===============================================
 
-### License ###
+### Origins ###
+Shkuph is a successor of the nice
+[moneta](https://github.com/wycats/moneta) gem
+(by Yehuda Katz), including some code from it.
 
+### License ###
 Shkuph is available under an MIT-style license.
 
 ### Warranty ###
