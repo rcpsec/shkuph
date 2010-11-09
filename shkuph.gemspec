@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version      = Shkuph::Version.to_s
   s.authors      = [ 'Dmitry A. Ustalov', 'Yehuda Katz' ]
   s.email        = 'dmitry@eveel.ru'
-  s.homepage     = 'http://github.com/eveel/shkuph'
+  s.homepage     = 'https://github.com/eveel/shkuph'
   s.summary      = 'Shkuph: A Comfortable and Unified KVS Interface.'
   s.description  = s.summary
 
