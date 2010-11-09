@@ -35,6 +35,7 @@ rdoc
 .yardoc
 pkg
 wiki
+dist
 
 ## PROJECT::SPECIFIC
 
