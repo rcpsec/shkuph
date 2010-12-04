@@ -30,6 +30,10 @@ class Shkuph::TestStringStrategy < MiniTest::Unit::TestCase
       assert_nil subject.load(nil)
     end
 
+    should 'dump Integers as Strings' do
+      assert_equal '3', subject.dump(3)
+    end
+
     should 'refuse to dump non-String values' do
       assert_raises TypeError do
         subject.dump(Object.new)
