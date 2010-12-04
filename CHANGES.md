@@ -4,9 +4,13 @@ Changes in Shkuph
 Changes in Shkuph key-value storage interface
 are listed here.
 
+v0.0.3
+------
+- More liberal StringStrategy.
+
 v0.0.2
 ------
-- Just bump, ok.
+- Fixed: wrong GDBM Adapter GDBM#each value strategy
 
 v0.0.1
 ------
