@@ -25,5 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'mg'
   s.add_development_dependency 'rcov'
 
-  s.required_rubygems_version = '>= 1.3.7'
+  s.required_rubygems_version = '>= 1.3.6'
 end

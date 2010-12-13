@@ -4,6 +4,10 @@ Changes in Shkuph
 Changes in Shkuph key-value storage interface
 are listed here.
 
+v0.0.4
+------
+- RubyGems ≥ 1.3.6 instead of 1.3.7.
+
 v0.0.3
 ------
 - More liberal StringStrategy.
