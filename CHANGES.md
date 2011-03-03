@@ -4,6 +4,14 @@ Changes in Shkuph
 Changes in Shkuph key-value storage interface
 are listed here.
 
+v0.1.1
+------
+- Add TokyoCabinet support.
+
+v0.1.0
+------
+- Code does not suck as early.
+
 v0.0.4
 ------
 - RubyGems ≥ 1.3.6 instead of 1.3.7.
