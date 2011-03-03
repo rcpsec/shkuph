@@ -6,7 +6,7 @@ require 'shkuph/tokyocabinet/hash'
 class Shkuph::TokyoCabinet::TestHash < MiniTest::Unit::TestCase
   context 'Shkuph TokyoCabinet Hash Database' do
     setup do
-      @tch = Shkuph::GDBM.new('test.tch',
+      @tch = Shkuph::TokyoCabinet::Hash.new('test.tch',
         :options => { :mode => :manage },
         :key_marshal => Marshal,
         :value_marshal => Marshal)

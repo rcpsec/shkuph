@@ -8,7 +8,10 @@ end
 
 require 'forwardable'
 
-class Shkuph::TokyoCabinet::Table < Shkuph::Base
+module Shkuph::TokyoCabinet # :nodoc:
+end
+
+class Shkuph::TokyoCabinet::Table < Shkuph::Base # :nodoc:
   include TokyoCabinet
   extend Forwardable
 
@@ -17,12 +20,12 @@ class Shkuph::TokyoCabinet::Table < Shkuph::Base
       configuration.merge(:value_marshal => Marshal)
     )
 
-    @shkuph = ::TDB::new
+    @shkuph = TDB::new
 
     table_mode = if :manage == options[:mode]
-      ::TDB::OWRITER | ::TDB::OCREAT
+      TDB::OWRITER | TDB::OCREAT
     else
-      ::TDB::OREADER | ::TDB::ONOLOCK
+      TDB::OREADER | TDB::ONOLOCK
     end
 
     if !@shkuph.open(filename, table_mode)

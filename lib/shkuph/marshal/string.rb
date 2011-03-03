@@ -1,18 +1,25 @@
 # encoding: utf-8
 
-module Shkuph::Marshal
-  module String
-    class << self
-      def dump(value)
-        return '' unless value
-        value = value.to_s if value.is_a? Integer
-        raise TypeError unless value.is_a? String
-        value
-      end
+module Shkuph::Marshal # :nodoc:
+end
 
-      def load(dump)
-        raise TypeError unless dump.is_a? String
-        dump
+module Shkuph::Marshal::String
+  class << self
+    def dump(value)
+      case value
+      when String then value
+      when Integer then value.to_s
+      when nil then ''
+      else
+        raise TypeError
+      end
+    end
+
+    def load(dump)
+      case dump
+      when String then dump
+      else
+        raise TypeError
       end
     end
   end

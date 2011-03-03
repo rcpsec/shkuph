@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = '[none]'
 
   s.add_development_dependency 'shoulda'
+  s.add_development_dependency 'tokyocabinet'
 
   s.required_rubygems_version = '>= 1.3.6'
 end

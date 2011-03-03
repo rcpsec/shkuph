@@ -10,7 +10,10 @@ end
 
 require 'forwardable'
 
-class Shkuph::TokyoCabinet::Hash < Shkuph::Base
+module Shkuph::TokyoCabinet # :nodoc:
+end
+
+class Shkuph::TokyoCabinet::Hash < Shkuph::Base # :nodoc
   include TokyoCabinet
   extend Forwardable
 

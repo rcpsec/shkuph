@@ -10,7 +10,7 @@ end
 
 require 'forwardable'
 
-class Shkuph::GDBM < Shkuph::Base
+class Shkuph::GDBM < Shkuph::Base # :nodoc:
   extend Forwardable
 
   def initialize(filename, configuration = {})
