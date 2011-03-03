@@ -4,7 +4,7 @@ require 'helper'
 
 require 'shkuph/marshal/string'
 
-class Shkuph::Marshal::StringTest < MiniTest::Unit::TestCase
+class Shkuph::Marshal::TestString < MiniTest::Unit::TestCase
   context 'Shkuph String Marshal' do
     subject { Shkuph::Marshal::String }
 

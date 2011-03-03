@@ -14,7 +14,7 @@ class Shkuph::TokyoCabinet::TestHash < MiniTest::Unit::TestCase
 
     teardown do
       @tch.close
-      FileUtils.rm_f 'test.gdbm'
+      FileUtils.rm_f 'test.tch'
     end
 
     subject { @tch }
