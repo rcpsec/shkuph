@@ -2,15 +2,11 @@
 
 require 'helper'
 
-require 'shkuph/strategies/string_strategy'
+require 'shkuph/marshal/string'
 
-class Shkuph::TestStringStrategy < MiniTest::Unit::TestCase
-  context 'Shkuph Strategies: String' do
-    subject { @strategy ||= Shkuph::StringStrategy.new }
-
-    should 'be successor of Shkuph::Strategy' do
-      subject.is_a? ::Shkuph::Strategy
-    end
+class Shkuph::Marshal::StringTest < MiniTest::Unit::TestCase
+  context 'Shkuph String Marshal' do
+    subject { Shkuph::Marshal::String }
 
     should 'dump only String values' do
       value = 'value'
