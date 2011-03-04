@@ -69,7 +69,8 @@ module Shkuph
     #
     def fetch(key, value = nil)
       self[key] || begin
-        block_given? ? yield(key) : value
+        value ||= block_given? ? yield(key) : default
+        self[key] || value
       end
     end
 
