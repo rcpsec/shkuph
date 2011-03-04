@@ -45,8 +45,13 @@ class Shkuph::TokyoCabinet::Hash < Shkuph::Base # :nodoc
   end
 
   def each(&block)
-    @shkuph.each_pair do |key, value|
-      block.call(key_load(key), value_load(value))
+    @shkuph.iterinit
+    while (iterkey = @shkuph.iternext)
+      key = key_load(iterkey)
+      value = value_load(
+        @shkuph[key]
+      )
+      block.call(key, value)
     end
   end
 

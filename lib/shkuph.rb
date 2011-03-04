@@ -68,10 +68,10 @@ module Shkuph
     # Object:: Obtained value.
     #
     def fetch(key, value = nil)
-      self[key] || begin
-        value ||= block_given? ? yield(key) : default
-        self[key] || value
+      if read = self[key]
+        return read
       end
+      block_given? ? yield(key) : value
     end
 
     # Just get it.

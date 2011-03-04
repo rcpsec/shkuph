@@ -19,7 +19,7 @@ class Shkuph::Marshal::Hash
 
   def load(dump)
     return nil unless dump
-    return dump if dump.is_a? Hash
+    return dump if @klass.is_a? Hash
     @klass.from_hash(dump)
   end
 end
