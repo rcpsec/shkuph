@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 begin
   require 'tokyocabinet'
 rescue LoadError
@@ -16,11 +18,9 @@ class Shkuph::TokyoCabinet::Table < Shkuph::Base # :nodoc:
   extend Forwardable
 
   def initialize(filename, configuration = {})
-    super(filename,
-      configuration.merge(:value_marshal => Marshal)
-    )
+    super(filename, configuration)
 
-    @shkuph = TDB::new
+    @shkuph = TDB.new
 
     table_mode = if :manage == options[:mode]
       TDB::OWRITER | TDB::OCREAT
@@ -35,16 +35,18 @@ class Shkuph::TokyoCabinet::Table < Shkuph::Base # :nodoc:
   end
 
   def get(key)
-    @shkuph[key_dump(key)]
+    value_load(
+      @shkuph[key_dump(key)]
+    )
   end
 
   def set(key, value)
-    @shkuph[key_dump(key)] = value
+    @shkuph[key_dump(key)] = value_dump(value)
   end
 
   def each(&block)
     @shkuph.each_pair do |key, value|
-      block.call(key_load(key), value)
+      block.call(key_load(key), value_load(value))
     end
   end
 

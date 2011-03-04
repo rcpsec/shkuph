@@ -4,6 +4,14 @@ Changes in Shkuph
 Changes in Shkuph key-value storage interface
 are listed here.
 
+v0.1.3
+------
+- Improved Tokyo Cabinet Table Database support.
+
+v0.1.2
+------
+- Some changes.
+
 v0.1.1
 ------
 - Add TokyoCabinet support.

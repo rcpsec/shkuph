@@ -8,7 +8,8 @@ class Shkuph::TokyoCabinet::TestTable < MiniTest::Unit::TestCase
     setup do
       @tct = Shkuph::TokyoCabinet::Table.new('test.tct',
         :options => { :mode => :manage },
-        :key_marshal => Marshal)
+        :key_marshal => Marshal,
+        :value_marshal => Shkuph::Marshal::Hash.new)
     end
 
     teardown do
@@ -25,8 +26,8 @@ class Shkuph::TokyoCabinet::TestTable < MiniTest::Unit::TestCase
       assert_equal row, subject['test']
     end
 
-    if ENV['SHKUPH_TEST'].nil? || ENV['SHKUPH_TEST'] == 'tct'
-      #should_behave_as_key_value_store
-    end
+#    if ENV['SHKUPH_TEST'].nil? || ENV['SHKUPH_TEST'] == 'tct'
+#      should_behave_as_key_value_store
+#    end
   end
 end
