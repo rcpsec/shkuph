@@ -25,7 +25,7 @@ class Shkuph::TokyoCabinet::Table < Shkuph::Base # :nodoc:
     table_mode = if :manage == options[:mode]
       TDB::OWRITER | TDB::OCREAT
     else
-      TDB::OREADER | TDB::ONOLOCK
+      TDB::OREADER | TDB::ONOLCK
     end
 
     if !@shkuph.open(filename, table_mode)

@@ -25,7 +25,7 @@ class Shkuph::TokyoCabinet::Hash < Shkuph::Base # :nodoc
     hash_mode = if :manage == options[:mode]
       HDB::OWRITER | HDB::OCREAT
     else
-      HDB::OREADER | HDB::ONOLOCK
+      HDB::OREADER | HDB::ONOLCK
     end
 
     if !@shkuph.open(filename, hash_mode)
